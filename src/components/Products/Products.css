@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: stretch;
+    justify-content: space-evenly;
     max-width: 1400px;
     margin: 0 auto;
 }

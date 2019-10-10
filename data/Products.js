@@ -88,7 +88,7 @@ export default [
   },
   {
     name: "Shaped Puzzles",
-    image: "puzzles-rect.png",
+    image: "puzzles.png",
     description:
       "A photo of your child or even your pet or vehicle with very big pieces for small children or a heart shaped puzzle with beautiful picture of you and your partner at a very special occasion."
   }

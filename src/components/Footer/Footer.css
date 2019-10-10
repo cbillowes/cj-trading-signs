@@ -20,6 +20,8 @@
 }
 
 .notice-container h4 {
-    text-align: center;
+    text-align: right;
     margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
 }

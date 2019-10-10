@@ -1,0 +1,42 @@
+.pricing {
+  border: solid 1px #ccc;
+  box-shadow: #ccc 2px 2px 8px;
+  width: 100%;
+}
+
+.pricing th.heading {
+  background-color: black;
+  color: white;
+}
+
+.pricing td.heading,
+.pricing td.squash {
+  width: 350px;
+}
+
+.pricing td.expanded-squash {
+  width: 700px;
+}
+
+.pricing th {
+  background-color: #38b6ff;
+  padding: .5em;
+}
+
+.pricing .heading,
+.pricing tr:nth-child(odd) td.heading {
+  font-weight: bold;
+}
+
+.pricing td {
+  padding: .25em;
+}
+
+.pricing tr:hover td.heading,
+.pricing tr:nth-child(odd) td {
+  background-color: #ccc;
+}
+
+.pricing tr:hover td {
+  background-color: rgb(248, 96, 147);
+}
