@@ -1,12 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:700|Open+Sans&display=swap");
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.75em;
+  margin: 0;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Amatic SC", cursive;
 }
