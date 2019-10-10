@@ -1,4 +1,5 @@
 import React from "react";
+import Product from "./Product";
 import products from "../../../data/Products";
 import "./Products.css";
 
@@ -7,11 +8,7 @@ class Products extends React.Component {
     return (
       <div class="products">
         {products.map(p => (
-          <section class="product">
-            <h1>{p.name}</h1>
-            <img src={`products/${p.image}`} />
-            <p>{p.description}</p>
-          </section>
+          <Product name={p.name} image={p.image} description={p.description} />
         ))}
       </div>
     );

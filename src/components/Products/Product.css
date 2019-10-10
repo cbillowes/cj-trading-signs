@@ -1,0 +1,13 @@
+.product {
+    width: 300px;
+    margin: 0 1em 1em 0;
+    overflow: hidden;
+}
+
+.product h1 {
+    font-size: 2.5em;
+}
+
+.product img {
+    height: 400px;
+}
