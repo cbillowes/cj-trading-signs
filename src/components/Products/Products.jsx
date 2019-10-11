@@ -20,7 +20,7 @@ export default () => {
   )
   const products = data.site.siteMetadata.products;
   return (
-    <div class="products">
+    <div className="products">
       {products.map(p => (
         <Product name={p.name} image={p.image} description={p.description} />
       ))}

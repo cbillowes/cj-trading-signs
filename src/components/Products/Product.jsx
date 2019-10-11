@@ -22,7 +22,7 @@ export default ({ name, image, description }) => {
   const fileEdges = optimizedFiles.getFileEdges(query); 
 
   return (
-    <section class="product">
+    <section className="product">
       <h1>{name}</h1>
       <div
         css={css`

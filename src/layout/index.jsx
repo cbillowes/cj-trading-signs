@@ -14,7 +14,7 @@ export default class MainLayout extends React.Component {
           <meta name="description" content={config.siteDescription} />
           <html lang="en" />
         </Helmet>
-        <div class="layout">
+        <div className="layout">
           <Header />
           {children}
           <Footer />
