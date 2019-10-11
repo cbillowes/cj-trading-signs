@@ -1,10 +1,12 @@
 const urljoin = require("url-join");
 const config = require("./data/SiteConfig");
+const products = require("./data/Products");
 
 module.exports = {
   pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
   siteMetadata: {
     siteUrl: urljoin(config.siteUrl, config.pathPrefix),
+    products: products,
     rssMetadata: {
       site_url: urljoin(config.siteUrl, config.pathPrefix),
       feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
@@ -14,7 +16,7 @@ module.exports = {
         config.siteUrl,
         config.pathPrefix
       )}/logo-512x512.png`,
-      copyright: config.copyright
+      copyright: config.copyright,
     }
   },
   plugins: [
