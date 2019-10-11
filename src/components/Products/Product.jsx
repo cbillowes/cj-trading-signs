@@ -1,20 +1,11 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { css } from "@emotion/core";
+import optimizedFiles from "../../../data/OptimizedFiles";
 import "./Product.css";
 
-function getImage(data, image) {
-  const key = image.replace(/\.png/gi, "");
-  const images = data.allFile.edges;
-  return images.map(d => {
-    if (key === d.node.name) {
-      return d.node.publicURL;
-    }
-  });
-}
-
 export default ({ name, image, description }) => {
-  const data = useStaticQuery(
+  const query = useStaticQuery(
     graphql`
       query {
         allFile {
@@ -28,6 +19,7 @@ export default ({ name, image, description }) => {
       }
     `
   );
+  const fileEdges = optimizedFiles.getFileEdges(query); 
 
   return (
     <section class="product">
@@ -36,7 +28,7 @@ export default ({ name, image, description }) => {
         css={css`
           width: 300px;
           height: 400px;
-          background: url(${getImage(data, image)}) no-repeat center center;
+          background: url(${optimizedFiles.getFile(fileEdges, image)}) no-repeat center center;
           background-size: cover;
         `}
       />

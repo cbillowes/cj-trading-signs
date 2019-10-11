@@ -1,17 +1,30 @@
 import React, { Component } from "react";
-import { Link } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import optimizedFiles from "../../../data/OptimizedFiles";
 import "./Header.css";
 
-class Header extends Component {
-  render() {
-    return (
-      <header className="header">
-        <Link to="/">
-          <img src="logo.png" />
-        </Link>
-      </header>
-    );
-  }
-}
+export default () => {
+  const query = useStaticQuery(
+    graphql`
+      query {
+        allFile {
+          edges {
+            node {
+              name
+              publicURL
+            }
+          }
+        }
+      }
+    `
+  );
+  const fileEdges = optimizedFiles.getFileEdges(query); 
 
-export default Header;
+  return (
+    <header className="header">
+      <Link to="/">
+        <img src={optimizedFiles.getFile(fileEdges, "logo.png")} />
+      </Link>
+    </header>
+  );
+};
